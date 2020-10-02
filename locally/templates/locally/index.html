@@ -21,6 +21,21 @@
     <script defer src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <!--CHARTS.JS-->
     <script defer src="{% static 'js/charts.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-179504076-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-179504076-1");
+    </script>
+
     <title>Locally</title>
   </head>
   {% include 'locally/nav.html' %}
