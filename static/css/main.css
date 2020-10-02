@@ -1,0 +1,237 @@
+@font-face {
+  font-family: Proxima_Nova_Regular;
+  src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+  font-family: Proxima_Nova_Bold;
+  src: url(../fonts/ProximaNova-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1f3e;
+}
+
+/* CUSTOM SCROLLBAR
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #58508d #1c1f3e;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1c1f3e;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #58508d;
+  border-radius: 20px;
+  border: 3px solid #1c1f3e;
+}
+
+a:focus {
+  outline: none;
+}
+
+main {
+  margin-left: 15rem;
+  padding: 2rem 3rem;
+  background-color: #1c1f3e;
+  color: #ffffff;
+  height: 100vh;
+  font-family: Proxima_Nova_Regular;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+main .container .infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+main .container #recuperados {
+  background-color: #bc5090;
+}
+
+main .container #activos {
+  background-color: #58508d;
+}
+
+main .container #muertes {
+  background-color: #ff6361;
+}
+
+main .container #totales {
+  background-color: #003f5c;
+}
+
+main .chart {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  min-height: 250px;
+  width: 100%;
+  height: 350px;
+}
+
+main .last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+main .last a {
+  background-color: #ff6361;
+  padding: 0.8rem 0.6rem;
+  border-radius: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  border: 2px solid #1c1f3e;
+  transition: 0.5s ease;
+}
+
+main .last a:hover {
+  background: none;
+  border: 2px solid #bc5090;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-left: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+  main .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.2rem;
+  }
+  main .container .infoBox {
+    font-size: 1.2rem;
+  }
+  main .last {
+    margin: 2rem 0 6.5rem 0;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.block .search {
+  font-family: Proxima_Nova_Regular;
+  font-size: 1.2rem;
+  width: 60%;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  background-color: #232649;
+}
+
+.block .messages {
+  background-color: #003f5c;
+  color: #ffffff;
+  width: 60%;
+  padding: 0.7rem;
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .search {
+    width: 110%;
+  }
+  .frm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.navbar {
+  width: 15rem;
+  height: 100vh;
+  position: fixed;
+  background-color: #232649;
+  box-shadow: 4px 0 8px 0 rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.navbar .nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.navbar .nav .nav-link {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  height: 6rem;
+  font-family: Proxima_Nova_Regular;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 0.5s;
+}
+
+.navbar .nav .nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  color: #ff6361;
+}
+
+.navbar .nav .nav-link i {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar .nav .logo {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .navbar .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .navbar .nav .logo {
+    display: none;
+  }
+  .navbar .nav .nav-text {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

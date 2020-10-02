@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'favicon.png' %}"
+    />
+    <!--FontAwesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sa256-hh20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <!--ZingChart Library-->
+    <script defer src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <!--CHARTS.JS-->
+    <script defer src="{% static 'js/charts.js' %}"></script>
+    <title>Locally</title>
+  </head>
+  {% include 'locally/nav.html' %}
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+</html>

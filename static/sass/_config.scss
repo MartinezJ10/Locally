@@ -1,0 +1,28 @@
+//COLOURS
+$bg: #1c1f3e;
+$nav: #232649;
+
+$char1: #bc5090;
+$char2: #58508d;
+$char3: #ff6361;
+$char4: #003f5c;
+
+$text: #ffffff;
+
+//TYPOGRAPHY
+@font-face {
+  font-family: Proxima_Nova_Regular;
+  src: url(../fonts/ProximaNova-Regular.otf);
+}
+@font-face {
+  font-family: Proxima_Nova_Bold;
+  src: url(../fonts/ProximaNova-Bold.otf);
+}
+
+$reg: Proxima_Nova_Regular;
+$bold: Proxima_Nova_Bold;
+
+//ANIMATION
+$trans: 0.5s;
+//SHADOW
+$shadow: 4px 0 8px 0 rgba(00, 00, 00, 0.3);

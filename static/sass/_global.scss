@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $bg;
+  //overflow: hidden;
+}
+/* CUSTOM SCROLLBAR
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $char2 $bg;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: $bg;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $char2;
+  border-radius: 20px;
+  border: 3px solid $bg;
+}
+
+a:focus {
+  outline: none;
+}

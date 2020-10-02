@@ -1,0 +1,55 @@
+{% extends 'locally/index.html' %} {% block content %}
+
+<main>
+  <div class="block">
+    <form class="frm" method="POST">
+      {% csrf_token %}
+      <input
+        type="text"
+        name="search"
+        placeholder="Busca por país"
+        class="search"
+      />
+      {% for message in messages %}
+      <p class="messages">{{message}}</p>
+      {% endfor %}
+    </form>
+    <h1>Datos Actualizados COVID-19 {{search}}</h1>
+  </div>
+  <div class="container">
+    <div class="infoBox" id="recuperados">
+      <h3>Recuperados</h3>
+      <h4 id="recovered">{{recovered}}</h4>
+      <p></p>
+    </div>
+    <div class="infoBox" id="activos">
+      <h3>Activos</h3>
+      <h4 id="active">{{active}}</h4>
+      <p></p>
+    </div>
+    <div class="infoBox" id="muertes">
+      <h3>Muertes</h3>
+      <h4 id="deaths">{{deaths}}</h4>
+      <p>{{newDeaths}}</p>
+    </div>
+    <div class="infoBox" id="totales">
+      <h3>Casos Totales</h3>
+      <h4 id="all">{{all}}</h4>
+      <p>{{new}}</p>
+    </div>
+  </div>
+  <div id="myChart" class="chart"></div>
+  <div class="last">
+    <a
+      target="_blank"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSeB0N8N8ZtMDjGonZlL1T3YfcM6drrIwHF5355C79d5TxBMpA/viewform?usp=sf_link"
+      >¡Llena el Formulario!</a
+    >
+    <p>Página desarrollada como parte del proyecto TES por grupo de 12BTPI</p>
+    <p>
+      Por motivo de orígen de datos internacional el buscador acepta países
+      únicamente en inglés
+    </p>
+  </div>
+</main>
+{% endblock %}

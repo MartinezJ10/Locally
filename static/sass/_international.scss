@@ -1,0 +1,35 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  .search {
+    font-family: $reg;
+    font-size: 1.2rem;
+    width: 60%;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 25px;
+    color: $text;
+    background-color: $nav;
+  }
+  .messages {
+    background-color: $char4;
+    color: $text;
+    width: 60%;
+    padding: 0.7rem;
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    border-radius: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .search {
+    width: 110%;
+  }
+  .frm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
